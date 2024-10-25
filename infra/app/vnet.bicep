@@ -68,8 +68,8 @@ resource virtualNetwork 'Microsoft.Network/virtualNetworks@2024-01-01' = {
         type: 'Microsoft.Network/virtualNetworks/subnets'
       }
       {
-        name: resourceId('Microsoft.Network/virtualNetworks/subnets', vNetName, stSubnetName)
-        id: resourceId('Microsoft.Network/virtualNetworks/subnets', vNetName, 'private-endpoints-subnet')
+        name: stSubnetName
+        id: resourceId('Microsoft.Network/virtualNetworks/subnets', vNetName, stSubnetName)
         properties: {
           addressPrefixes: [
             '10.0.4.0/24'
