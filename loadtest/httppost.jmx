@@ -43,7 +43,7 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain"><YOUR FUNCTION APP NAME>.azurewebsites.net</stringProp>
+          <stringProp name="HTTPSampler.domain">${__BeanShell( System.getenv("FUNCTION_APP_NAME") )}.azurewebsites.net</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/api/ProcessCustomerFeedback</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -77,7 +77,7 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain"><YOUR FUNCTION APP NAME>.azurewebsites.net</stringProp>
+          <stringProp name="HTTPSampler.domain">${__BeanShell( System.getenv("FUNCTION_APP_NAME") )}.azurewebsites.net</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/api/ProcessCustomerFeedback</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -111,7 +111,7 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain"><YOUR FUNCTION APP NAME>.azurewebsites.net</stringProp>
+          <stringProp name="HTTPSampler.domain">${__BeanShell( System.getenv("FUNCTION_APP_NAME") )}.azurewebsites.net</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/api/ProcessCustomerFeedback</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -145,7 +145,7 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain"><YOUR FUNCTION APP NAME>.azurewebsites.net</stringProp>
+          <stringProp name="HTTPSampler.domain">${__BeanShell( System.getenv("FUNCTION_APP_NAME") )}.azurewebsites.net</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/api/ProcessCustomerFeedback</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -179,7 +179,7 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain"><YOUR FUNCTION APP NAME>.azurewebsites.net</stringProp>
+          <stringProp name="HTTPSampler.domain">${__BeanShell( System.getenv("FUNCTION_APP_NAME") )}.azurewebsites.net</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/api/ProcessCustomerFeedback</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -213,7 +213,7 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain"><YOUR FUNCTION APP NAME>.azurewebsites.net</stringProp>
+          <stringProp name="HTTPSampler.domain">${__BeanShell( System.getenv("FUNCTION_APP_NAME") )}.azurewebsites.net</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/api/ProcessCustomerFeedback</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -247,7 +247,7 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain"><YOUR FUNCTION APP NAME>.azurewebsites.net</stringProp>
+          <stringProp name="HTTPSampler.domain">${__BeanShell( System.getenv("FUNCTION_APP_NAME") )}.azurewebsites.net</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/api/ProcessCustomerFeedback</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -281,7 +281,7 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain"><YOUR FUNCTION APP NAME>.azurewebsites.net</stringProp>
+          <stringProp name="HTTPSampler.domain">${__BeanShell( System.getenv("FUNCTION_APP_NAME") )}.azurewebsites.net</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/api/ProcessCustomerFeedback</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -315,7 +315,7 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain"><YOUR FUNCTION APP NAME>.azurewebsites.net</stringProp>
+          <stringProp name="HTTPSampler.domain">${__BeanShell( System.getenv("FUNCTION_APP_NAME") )}.azurewebsites.net</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/api/ProcessCustomerFeedback</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -349,7 +349,7 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain"><YOUR FUNCTION APP NAME>.azurewebsites.net</stringProp>
+          <stringProp name="HTTPSampler.domain">${__BeanShell( System.getenv("FUNCTION_APP_NAME") )}.azurewebsites.net</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/api/ProcessCustomerFeedback</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -383,7 +383,7 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain"><YOUR FUNCTION APP NAME>.azurewebsites.net</stringProp>
+          <stringProp name="HTTPSampler.domain">${__BeanShell( System.getenv("FUNCTION_APP_NAME") )}.azurewebsites.net</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/api/ProcessCustomerFeedback</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -417,7 +417,7 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain"><YOUR FUNCTION APP NAME>.azurewebsites.net</stringProp>
+          <stringProp name="HTTPSampler.domain">${__BeanShell( System.getenv("FUNCTION_APP_NAME") )}.azurewebsites.net</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/api/ProcessCustomerFeedback</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -451,7 +451,7 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain"><YOUR FUNCTION APP NAME>.azurewebsites.net</stringProp>
+          <stringProp name="HTTPSampler.domain">${__BeanShell( System.getenv("FUNCTION_APP_NAME") )}.azurewebsites.net</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/api/ProcessCustomerFeedback</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -485,7 +485,7 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain"><YOUR FUNCTION APP NAME>.azurewebsites.net</stringProp>
+          <stringProp name="HTTPSampler.domain">${__BeanShell( System.getenv("FUNCTION_APP_NAME") )}.azurewebsites.net</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/api/ProcessCustomerFeedback</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -519,7 +519,7 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain"><YOUR FUNCTION APP NAME>.azurewebsites.net</stringProp>
+          <stringProp name="HTTPSampler.domain">${__BeanShell( System.getenv("FUNCTION_APP_NAME") )}.azurewebsites.net</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/api/ProcessCustomerFeedback</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -553,7 +553,7 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain"><YOUR FUNCTION APP NAME>.azurewebsites.net</stringProp>
+          <stringProp name="HTTPSampler.domain">${__BeanShell( System.getenv("FUNCTION_APP_NAME") )}.azurewebsites.net</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/api/ProcessCustomerFeedback</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -587,7 +587,7 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain"><YOUR FUNCTION APP NAME>.azurewebsites.net</stringProp>
+          <stringProp name="HTTPSampler.domain">${__BeanShell( System.getenv("FUNCTION_APP_NAME") )}.azurewebsites.net</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/api/ProcessCustomerFeedback</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -621,7 +621,7 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain"><YOUR FUNCTION APP NAME>.azurewebsites.net</stringProp>
+          <stringProp name="HTTPSampler.domain">${__BeanShell( System.getenv("FUNCTION_APP_NAME") )}.azurewebsites.net</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/api/ProcessCustomerFeedback</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -655,7 +655,7 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain"><YOUR FUNCTION APP NAME>.azurewebsites.net</stringProp>
+          <stringProp name="HTTPSampler.domain">${__BeanShell( System.getenv("FUNCTION_APP_NAME") )}.azurewebsites.net</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/api/ProcessCustomerFeedback</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>
@@ -689,7 +689,7 @@
               </elementProp>
             </collectionProp>
           </elementProp>
-          <stringProp name="HTTPSampler.domain"><YOUR FUNCTION APP NAME>.azurewebsites.net</stringProp>
+          <stringProp name="HTTPSampler.domain">${__BeanShell( System.getenv("FUNCTION_APP_NAME") )}.azurewebsites.net</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/api/ProcessCustomerFeedback</stringProp>
           <stringProp name="HTTPSampler.method">POST</stringProp>

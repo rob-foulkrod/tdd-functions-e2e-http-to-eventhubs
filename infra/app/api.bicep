@@ -36,6 +36,7 @@ module api '../core/host/functions-flexconsumption.bicep' = {
     maximumInstanceCount: maximumInstanceCount //needed for Flex
     virtualNetworkSubnetId: virtualNetworkSubnetId
     deploymentStorageContainerName: deploymentStorageContainerName
+    publicNetworkAccess: true //needed to easily deploy the application
   }
 }
 

@@ -21,6 +21,7 @@ param applicationInsightsDashboardName string = ''
 param applicationInsightsName string = ''
 param appServicePlanName string = ''
 param logAnalyticsName string = ''
+param loadTestName string = ''
 param resourceGroupName string = ''
 param storageAccountName string = ''
 param eventHubName string = ''
@@ -28,6 +29,7 @@ param eventHubNamespaceName string = ''
 param vNetName string = ''
 param ehSubnetName string = ''
 param appSubnetName string = ''
+param loadSubnetName string = ''
 
 @description('Id of the user or app to assign application roles')
 param principalId string = ''
@@ -154,7 +156,9 @@ module serviceVirtualNetwork 'app/vnet.bicep' = {
     tags: tags
     vNetName: !empty(vNetName) ? vNetName : '${abbrs.networkVirtualNetworks}${resourceToken}'
     ehSubnetName: !empty(ehSubnetName) ? ehSubnetName : '${abbrs.networkVirtualNetworksSubnets}eh${resourceToken}'  
-    appSubnetName: !empty(appSubnetName) ? appSubnetName : '${abbrs.networkVirtualNetworksSubnets}app${resourceToken}'  
+    appSubnetName: !empty(appSubnetName) ? appSubnetName : '${abbrs.networkVirtualNetworksSubnets}app${resourceToken}' 
+    loadSubnetName: !empty(loadSubnetName) ? loadSubnetName : '${abbrs.networkVirtualNetworksSubnets}load${resourceToken}' 
+    
   }
 }
 
@@ -194,6 +198,15 @@ module monitoring './core/monitor/monitoring.bicep' = {
     applicationInsightsDashboardName: !empty(applicationInsightsDashboardName) ? applicationInsightsDashboardName : '${abbrs.portalDashboards}${resourceToken}'
   }
 }
+module loadTest 'app/loadtesting.bicep' = {
+  name: 'loadTestDeployment${resourceToken}'
+  scope: rg
+  params: {
+    loadTestName: !empty(loadTestName) ? loadTestName : 'loadtesting${resourceToken}'
+    location: location
+    tags: tags
+  }
+}
 
 // App outputs
 output APPLICATIONINSIGHTS_CONNECTION_STRING string = monitoring.outputs.applicationInsightsConnectionString
@@ -202,3 +215,5 @@ output AZURE_TENANT_ID string = tenant().tenantId
 output SERVICE_API_BASE_URL string = api.outputs.SERVICE_API_URI
 output RESOURCE_GROUP string = rg.name
 output AZURE_FUNCTION_NAME string = api.outputs.SERVICE_API_NAME
+output LOADTESTING_NAME string = loadTest.outputs.loadTestName
+output LOAD_SUBNET_ID string = serviceVirtualNetwork.outputs.loadSubnetID
