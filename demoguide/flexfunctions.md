@@ -42,12 +42,14 @@
 ***
 ### 1. What Resources are getting deployed
 
+* **Function App (Flex Consumption):** The Azure Function App hosting the backend API using the dotnet isolated runtime.
+* **Event Hubs:** An Event Hubs namespace and event hub for streaming data.
+* **Virtual Network:** Contains subnets for the function app, Event Hubs, and load testing resources.
+* **Private Endpoints:** Secure connectivity for the storage account and Event Hubs.
+* **Application Insights & Monitoring:** For telemetry and live performance metrics.
+* **Azure Load Testing:** A pre-installed load testing instance to simulate and assess load performance.
 
-* List
-* of 
-* Resources
-
-[Image]
+![List of resources created by the bicep template](../img/resources.png)
 
 <br></br>
 
@@ -82,7 +84,7 @@
 
 ## Clean up resources
 
-When you no longer need the resources created in this sample, run the following command to delete the Azure resources:
+Running the load test will quickly create a large collection of function instances that will be slower to delete. Deleting the demo promptly will consume less of your budget. When you no longer need the resources created in this sample, run the following command to delete the Azure resources:
 
 ```bash
 azd down
