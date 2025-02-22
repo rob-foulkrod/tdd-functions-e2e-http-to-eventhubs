@@ -64,7 +64,7 @@
 ![Event Hubs private endpoint](../img/eh-private-endpoint.png)
 4. An outbound virtual network integration has been created in your Function App into another subnet in the same VNet. This means it can access the Event Hubs namespace. You can check this in the function app's `Networking` tab in the `Outbound traffic configuration` section:
 ![Function App Networking tab](../img/func-vnet.png)
-5. Open the Application Insights instance that was created by the Bicep deploy. Open the `Live metrics` tab to monitor for live events. Notice that it can't connect to the application. This is expected, because the Flex Consupmtion app is scaled to zero as there's no traffic or executions happening yet.
+5. Open the Application Insights instance that was created by the Bicep deploy. Open the `Live metrics` tab to monitor for live events. Notice that it can't connect to the application. This is expected, because the Flex Consumption app is scaled to zero as there's no traffic or executions happening yet.
 ![Live Metrics not available](../img//no-live-metrics.png)
 
 ## Test the solution
