@@ -51,6 +51,7 @@
 
 ![List of resources created by the bicep template](../img/resources.png)
 
+
 <br></br>
 
 
@@ -83,6 +84,7 @@
 ![Application Insights showing high RPS](../img/loadtest-appinsights.png) (This demo limits to 64 instances by default)
 
 ## Clean up resources
+
 
 Running the load test will quickly create a large collection of function instances that will be slower to delete. Deleting the demo promptly will consume less of your budget. When you no longer need the resources created in this sample, run the following command to delete the Azure resources:
 
