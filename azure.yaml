@@ -1,10 +1,19 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
 
-name: functions-e2e-http-to-eventhubs
+name: tdd-functions-e2e-http-to-eventhubs
 metadata:
-  template: functions-e2e-http-to-eventhubs@0.0.1
+  template: tdd-functions-e2e-http-to-eventhubs@0.0.1
+infra:
+   provider: "bicep"
 services:
   api:
     project: ./src/
     language: dotnet
     host: function
+hooks:
+  postdeploy: 
+    shell: pwsh
+    interactive: true
+    run: ./infra/hooks/uploadtest.ps1
+    
+    

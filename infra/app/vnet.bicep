@@ -7,6 +7,9 @@ param location string = resourceGroup().location
 @description('Specifies the name of the subnet for the Event Hubs private endpoint.')
 param ehSubnetName string = 'eh'
 
+@description('Specifies the name of the subnet for the Load testing subnet.')
+param loadSubnetName string = 'eh'
+
 @description('Specifies the name of the subnet for Function App virtual network integration.')
 param appSubnetName string = 'app'
 
@@ -80,6 +83,19 @@ resource virtualNetwork 'Microsoft.Network/virtualNetworks@2024-01-01' = {
         }
         type: 'Microsoft.Network/virtualNetworks/subnets'
       }
+      {
+        name: loadSubnetName
+        id: resourceId('Microsoft.Network/virtualNetworks/subnets', vNetName, loadSubnetName)
+        properties: {
+          addressPrefixes: [
+            '10.0.5.0/24'
+          ]
+          delegations: []
+          privateEndpointNetworkPolicies: 'Disabled'
+          privateLinkServiceNetworkPolicies: 'Enabled'
+        }
+        type: 'Microsoft.Network/virtualNetworks/subnets'
+      }
     ]
     virtualNetworkPeerings: []
     enableDdosProtection: false
@@ -92,4 +108,7 @@ output appSubnetName string = virtualNetwork.properties.subnets[1].name
 output appSubnetID string = virtualNetwork.properties.subnets[1].id
 output stSubnetName string = virtualNetwork.properties.subnets[2].name
 output stSubnetID string = virtualNetwork.properties.subnets[2].id
+output loadSubnetName string = virtualNetwork.properties.subnets[3].name
+output loadSubnetID string = virtualNetwork.properties.subnets[3].id
+
 

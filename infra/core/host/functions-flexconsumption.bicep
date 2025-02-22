@@ -22,6 +22,7 @@ param appSettings object = {}
 param instanceMemoryMB int = 2048
 param maximumInstanceCount int = 250
 param deploymentStorageContainerName string
+param publicNetworkAccess bool = true
 
 
 resource stg 'Microsoft.Storage/storageAccounts@2022-09-01' existing = {
@@ -64,6 +65,7 @@ resource functions 'Microsoft.Web/sites@2023-12-01' = {
       }
     }
     virtualNetworkSubnetId: virtualNetworkSubnetId
+    publicNetworkAccess: publicNetworkAccess ? 'Enabled' : 'Disabled'
   }
 
   resource configAppSettings 'config' = {
