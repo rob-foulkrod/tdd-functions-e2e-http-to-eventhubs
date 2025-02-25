@@ -33,7 +33,7 @@
 
 **Demo scenario story:** ...
 
-![List of resources created by the bicep template](../img/HTTP-VNET-EH.png)
+![List of resources created by the bicep template](https://raw.githubusercontent.com/rob-foulkrod/tdd-functions-e2e-http-to-eventhubs/main/img/HTTP-VNET-EH.png)
 <br></br>
 
 
@@ -50,7 +50,7 @@
 * **Application Insights & Monitoring:** For telemetry and live performance metrics.
 * **Azure Load Testing:** A pre-installed load testing instance to simulate and assess load performance.
 
-![List of resources created by the bicep template](../img/resources.png)
+![List of resources created by the bicep template](https://raw.githubusercontent.com/rob-foulkrod/tdd-functions-e2e-http-to-eventhubs/main/img/resources.png)
 
 <br></br>
 
@@ -60,20 +60,20 @@
 ## Inspect the solution (optional)
 
 1. Once the deployment is done, inspect the new resource group. The Flex Consumption function app and plan, storage, App Insights, Event Hubs, and networking services have been created and configured:
-![List of resources created by the bicep template](../img/resources.png)
+![List of resources created by the bicep template](https://raw.githubusercontent.com/rob-foulkrod/tdd-functions-e2e-http-to-eventhubs/main/img/resources.png)
 2. The Event Hubs namespace public network access has been turned off so nothing outside the VNet can access Event Hubs. You can check this in the Event Hub Namespace's `Networking` tab and the `Public access` tab:
-![Event Hubs public network access turned off](../img/eh-disabled-network-access.png)
+![Event Hubs public network access turned off](https://raw.githubusercontent.com/rob-foulkrod/tdd-functions-e2e-http-to-eventhubs/main/img/eh-disabled-network-access.png)
 3. The Event Hubs namespace has a private endpoint configured to one of the subnets in the Vnet. This means it can only be accessed from inside the VNet. You can check this in the Event Hub Namespace's `Networking` tab and the `Private Endpoint connections`:
-![Event Hubs private endpoint](../img/eh-private-endpoint.png)
+![Event Hubs private endpoint](https://raw.githubusercontent.com/rob-foulkrod/tdd-functions-e2e-http-to-eventhubs/main/img/eh-private-endpoint.png)
 4. An outbound virtual network integration has been created in your Function App into another subnet in the same VNet. This means it can access the Event Hubs namespace. You can check this in the function app's `Networking` tab in the `Outbound traffic configuration` section:
-![Function App Networking tab](../img/func-vnet.png)
+![Function App Networking tab](https://raw.githubusercontent.com/rob-foulkrod/tdd-functions-e2e-http-to-eventhubs/main/img/func-vnet.png)
 5. Open the Application Insights instance that was created by the Bicep deploy. Open the `Live metrics` tab to monitor for live events. Notice that it can't connect to the application. This is expected, because the Flex Consumption app is scaled to zero as there's no traffic or executions happening yet.
-![Live Metrics not available](../img//no-live-metrics.png)
+![Live Metrics not available](https://raw.githubusercontent.com/rob-foulkrod/tdd-functions-e2e-http-to-eventhubs/main/img/no-live-metrics.png)
 
 ## Test the solution
 
 1. **Primary Test:** Run the pre-installed Azure Load Testing instance that used the [loadtest.jmx](../loadtest/httppost.jmx) file. This test is already configured to run from a private subnet and will work correctly even if the function app's networking is restricted. Simply start the test to assess the solution's performance.
-![Run the load testing sample](../img/preinstalled-test.png)
+![Run the load testing sample](https://raw.githubusercontent.com/rob-foulkrod/tdd-functions-e2e-http-to-eventhubs/main/img/preinstalled-test.png)
 
 2. **Alternate Test:** If desired, you may also use a REST client to make HTTP POST calls to the function URL provided by the deployment output. For example, if using VS Code, install the REST Client extension and use the [test.http](../loadtest/test.http) file. The `loadtest` folder also contains sample JSON files for testing.
 
@@ -81,7 +81,7 @@
 
 4. Observe from the Azure Load Testing output, or via Application Insights, how the solution scales quickly to handle thousands of requests per second, utilizing Flex Consumption and secured VNet integration.
 
-![Application Insights showing high RPS](../img/loadtest-appinsights.png) (This demo limits to 64 instances by default)
+![Application Insights showing high RPS](https://raw.githubusercontent.com/rob-foulkrod/tdd-functions-e2e-http-to-eventhubs/main/img/loadtest-appinsights.png) (This demo limits to 64 instances by default)
 
 ## Clean up resources
 
