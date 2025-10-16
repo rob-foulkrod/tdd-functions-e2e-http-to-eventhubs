@@ -1,4 +1,6 @@
 # Read variables from environment variables
+azd env get-values > .env
+
 $resourceGroupName = $env:RESOURCE_GROUP
 $loadTestResourceName = $env:LOADTESTING_NAME
 $jmxFilePath = './loadtest/httppost.jmx'
