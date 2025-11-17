@@ -36,7 +36,10 @@ param principalId string = ''
 
 var abbrs = loadJsonContent('./abbreviations.json')
 var resourceToken = toLower(uniqueString(subscription().id, environmentName, location))
-var tags = { 'azd-env-name': environmentName }
+var tags = { 
+  'azd-env-name': environmentName
+  ServiceControl: 'Ignore'
+}
 // Generate a unique function app name if one is not provided.
 var appName = !empty(apiServiceName) ? apiServiceName : '${abbrs.webSitesFunctions}${environmentName}${resourceToken}'
 // Generate a unique container name that will be used for deployments.
