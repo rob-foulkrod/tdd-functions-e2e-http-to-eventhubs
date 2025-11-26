@@ -38,7 +38,7 @@ var abbrs = loadJsonContent('./abbreviations.json')
 var resourceToken = toLower(uniqueString(subscription().id, environmentName, location))
 var tags = { 
   'azd-env-name': environmentName
-  ServiceControl: 'Ignore'
+  SecurityControl: 'Ignore'
 }
 // Generate a unique function app name if one is not provided.
 var appName = !empty(apiServiceName) ? apiServiceName : '${abbrs.webSitesFunctions}${environmentName}${resourceToken}'
